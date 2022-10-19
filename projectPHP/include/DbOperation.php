@@ -8,15 +8,15 @@ class DbOperation
     {
         require_once dirname(__FILE__) . '/Constants.php';
         require_once dirname(__FILE__) . '/DbConnect.php';
-        // opening db connection
+        // 打開資料庫連接
         $db = new DbConnect();
         $this->conn = $db->connect();
     }
 
     /*
-     * This method is added
-     * We are taking username and password
-     * and then verifying it from the database
+     * 增加了這個方法
+     * 我們正在使用用戶名和密碼
+     * 然後從數據庫中驗證它
      * */
 
     public function userLogin($username, $pass)
@@ -30,10 +30,10 @@ class DbOperation
     }
 
     /*
-     * After the successful login we will call this method
-     * this method will return the user data in an array
-     * */
-
+     * 登錄成功後我們會調用這個方法
+     * 此方法將返回數組中的用戶數據
+     */
+    
     public function getUserByUsername($username)
     {
         $stmt = $this->conn->prepare("SELECT users_ID, users_name, users_email, users_phone, users_chineseName FROM users WHERE users_name = ?");
@@ -51,6 +51,7 @@ class DbOperation
         return $user;
     }
 
+    // 新增使用者
     public function createUser($username, $pass, $email, $name, $phone)
     {
         if (!$this->isUserExist($username, $email, $phone)) {
@@ -76,8 +77,6 @@ class DbOperation
         $stmt->store_result();
         return $stmt->num_rows > 0;
     }
-
-
 }
 
 ?>
