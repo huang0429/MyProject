@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // 隱藏navigationController
+        // 隱藏navigationController的back
         let backButton = UIBarButtonItem(title: "", style: UIBarButtonItem.Style.plain, target: navigationController, action: nil)
         navigationItem.leftBarButtonItem = backButton
         
@@ -87,6 +87,13 @@ class ViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    
+    @IBAction func registerButton(_ sender: Any) {
+        let registerViewController = self.storyboard?.instantiateViewController(withIdentifier: "RegisterViewController") as! RegisterViewController
+        self.navigationController?.pushViewController(registerViewController, animated: true)
+        self.dismiss(animated: false, completion: nil)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

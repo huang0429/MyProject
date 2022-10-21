@@ -6,40 +6,68 @@
 //
 
 import UIKit
+import Foundation
 
 class FirstTableViewController: UITableViewController {
-
+    
+    var newsItem = [newsSchema]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        tableView.rowHeight = 150
+        
+        fetchItems()
     }
 
+    func fetchItems(){
+        if let urlStr = "http://127.0.0.1:8080/LoginDemo/v1/getnews.php".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed), let url = URL(string: urlStr){
+            let task = URLSession.shared.dataTask(with: url){ [self]
+                (data, response, error) in
+                
+                if let data = data {
+                    let decoder = JSONDecoder()
+                    do {
+                        self.newsItem = try decoder.decode([newsSchema].self, from: data)
+                        
+                        DispatchQueue.main.async {
+                            self.tableView.reloadData()
+                        }
+                    } catch  {
+                        print(error)
+                    }
+                  
+                } else {
+                    print("no date")
+                }
+            }
+            task.resume()
+        }
+    }
+    
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return newsItem.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier:"\(FirstTableViewCell.self)" , for: indexPath) as? FirstTableViewCell
+        let news = newsItem[indexPath.row]
+        cell!.labelNewsID!.text = news.news_ID
+        cell!.labelNewsTitle.text = news.news_title
+        cell!.labelNewsDate.text = news.news_date
 
-        // Configure the cell...
-
-        return cell
+        return cell!
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.
