@@ -10,7 +10,9 @@ import Alamofire
 
 class ViewController: UIViewController {
     // 這裡的網址要跟剛剛在postman的測試網址一樣，但是localhost必需是數字
+    //let URL_USER_LOGIN = "http://127.0.0.1:8080/LoginDemo/v1/login.php"
     let URL_USER_LOGIN = "http://127.0.0.1:8080/LoginDemo/v1/login.php"
+    
     
     // 儲存用戶資料
     let defaultValues = UserDefaults.standard

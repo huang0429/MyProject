@@ -19,6 +19,8 @@
 		B485320028FF932300023E86 /* Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48531FF28FF932300023E86 /* Schema.swift */; };
 		B485320228FF96C500023E86 /* FirstTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B485320128FF96C500023E86 /* FirstTableViewCell.swift */; };
 		B485320428FFC2D700023E86 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B485320328FFC2D700023E86 /* RegisterViewController.swift */; };
+		B485320629025EC800023E86 /* QRcodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B485320529025EC800023E86 /* QRcodeViewController.swift */; };
+		B48532082902619000023E86 /* NextPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48532072902619000023E86 /* NextPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		B48531FF28FF932300023E86 /* Schema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schema.swift; sourceTree = "<group>"; };
 		B485320128FF96C500023E86 /* FirstTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTableViewCell.swift; sourceTree = "<group>"; };
 		B485320328FFC2D700023E86 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		B485320529025EC800023E86 /* QRcodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRcodeViewController.swift; sourceTree = "<group>"; };
+		B48532072902619000023E86 /* NextPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,8 @@
 				B404046F28F52008006F5669 /* ProfileViewController.swift */,
 				B48531FD28FE6F7A00023E86 /* FirstTableViewController.swift */,
 				B485320128FF96C500023E86 /* FirstTableViewCell.swift */,
+				B485320529025EC800023E86 /* QRcodeViewController.swift */,
+				B48532072902619000023E86 /* NextPageViewController.swift */,
 				B48531FF28FF932300023E86 /* Schema.swift */,
 				B404046128F51E37006F5669 /* Main.storyboard */,
 				B404046428F51E37006F5669 /* Assets.xcassets */,
@@ -225,7 +231,9 @@
 				B404046028F51E37006F5669 /* ViewController.swift in Sources */,
 				B404045C28F51E37006F5669 /* AppDelegate.swift in Sources */,
 				B485320428FFC2D700023E86 /* RegisterViewController.swift in Sources */,
+				B48532082902619000023E86 /* NextPageViewController.swift in Sources */,
 				B404047028F52008006F5669 /* ProfileViewController.swift in Sources */,
+				B485320629025EC800023E86 /* QRcodeViewController.swift in Sources */,
 				B404045E28F51E37006F5669 /* SceneDelegate.swift in Sources */,
 				B48531FE28FE6F7A00023E86 /* FirstTableViewController.swift in Sources */,
 				B485320228FF96C500023E86 /* FirstTableViewCell.swift in Sources */,
@@ -376,6 +384,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 35X95HVC6K;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = 1011LoginDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -383,6 +392,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -404,6 +414,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 35X95HVC6K;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = 1011LoginDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -411,6 +422,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

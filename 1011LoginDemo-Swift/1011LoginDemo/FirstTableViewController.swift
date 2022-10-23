@@ -18,9 +18,10 @@ class FirstTableViewController: UITableViewController {
         
         fetchItems()
     }
-
+    //http://192.168.1.112:8080/LoginDemo/v1/getnews.php    blu3387
+    //http://192.168.239.113:8080/LoginDemo/v1/getnews.php  note20
     func fetchItems(){
-        if let urlStr = "http://127.0.0.1:8080/LoginDemo/v1/getnews.php".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed), let url = URL(string: urlStr){
+        if let urlStr = "http://192.168.239.113:8080/LoginDemo/v1/getnews.php".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed), let url = URL(string: urlStr){
             let task = URLSession.shared.dataTask(with: url){ [self]
                 (data, response, error) in
                 
